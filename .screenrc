@@ -1,0 +1,107 @@
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+### Created by Brad Sims <tanfj@yahoo.com> 25/06/2004
+
+### I got tired of .screenrc's on the internet being so
+### poorly commented... So being a good GNUbie I took matters
+### into my own hands; and wrote this dotfile.
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+##    Explanation of hardstatus line    ##
+
+# Ignore the ' marks if you use these examples for yourself
+
+# Note that if you want to use the color brown under konsole
+# You actually use bright yellow (%{Y}).
+
+# Note the embeded space after the colon, I feel
+#  it just looks nicer with a blank between the
+#  text and console edge:
+#   '%{=b}%{G} Screens: '
+
+# This prints the window listing in blue:
+#   '%{b}%w'
+
+# This right-aligns what follows:
+#   '%='
+
+# This displays the time (hours and minutes) in 12hr format
+# and adds an AM/PM flag, in bold green:
+#   '%{G}%C%A'
+
+# This displays the day of the week:
+#   '%D'
+
+#This displays the date in Mon/day/year format:
+# and again I embeded a space to give me one space
+# between the text and console edge:
+#  '%M/%d/%Y '
+
+# The resultsing command give you a status line that
+#  looks like this:
+#   | Screens: 0* bash  <blanks zapped>         5:30PM  Fri, Jun/25/2004 |
+#  (The pipes indicate the edges of the xterm/console).
+
+# Green text, time, and date; windows in blue:
+hardstatus alwayslastline
+
+#hardstatus from http://dotfiles.org/~xabbott/.screenrc
+#hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+##	Random Settings		##
+
+term screen-256color
+
+autodetach            on
+
+vbell off
+
+defscrollback 10000 # Use a 30000-line scrollback buffer
+
+terminfo rxvt* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+altscreen on
+
+zombie kr # keep zombie windows (k=kill, r=reload)
+
+bind c screen 1
+bind 0 select 10                                                            
+screen 1
+select 1
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+##    Some general options    ##
+
+# Turn off start message:
+startup_message off
+
+# Set messages timeout to one second:
+msgwait 1
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+##    Keybindings    ##
+
+# bind <F1> to move to previous window
+# bind <F2> to move to next window
+# bind <F4> to create a new screen
+# bind <F3> to rename an existing window
+bindkey -k k1 prev
+bindkey -k k2 next
+bindkey -k k3 title
+bindkey -k k4 screen
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+
+##	Autostart 		##
+
+screen -t term1 	0
+screen -t term2 	1
+screen -t irc		7 weechat-dev
+screen -t bitorrent	8 rtorrent
+

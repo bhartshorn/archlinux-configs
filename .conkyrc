@@ -1,0 +1,157 @@
+#Author: Thio
+# Conky sample configuration
+#
+# the list of variables has been removed from this file in favour
+# of keeping the documentation more maintainable.
+# Check http://conky.sf.net for an up-to-date-list.
+
+# set to yes if you want Conky to be forked in the background
+background yes
+
+# X font when Xft is disabled, you can pick one with program xfontsel
+#font 5x7
+#font 6x10
+#font 7x13
+#font 8x13
+#font 9x15
+#font *mintsmild.se*
+#font -*-*-*-*-*-*-34-*-*-*-*-*-*-*
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+#xftfont ProggyTinyTTSZ 
+xftfont liberation sans:size=7
+
+# Text alpha when using Xft
+#xftalpha 0.8
+
+# Print everything to stdout?
+# out_to_console no
+
+# MPD host/port
+# mpd_host localhost
+# mpd_port 6600
+# mpd_password tinker_bell
+
+# Print everything to console?
+# out_to_console no
+
+# mail spool
+mail_spool $MAIL
+
+# Update interval in seconds
+update_interval 4 
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window 1
+
+# If own_window is yes, you may use type normal, desktop or override
+own_window_type override
+
+# Use pseudo transparency with own_window?
+own_window_transparent 0
+
+# If own_window_transparent is set to no, you can set the background colour here
+own_window_colour 333333
+
+# If own_window is yes, these window manager hints may be used
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 1280 10
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Draw borders around graphs
+draw_graph_borders yes
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 5
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color grey
+default_shade_color grey 
+default_outline_color white
+#default_shade_color white
+#default_outline_color 
+
+#dexter_client no
+#dexter_server no
+# config file for libdexter (default search path: $HOME/.dexterrc; /etc/libdexter/dexter.conf)
+#dexter_config
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment bottom_left
+#alignment bottom_left
+#alignment bottom_right
+#alignment none
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 0
+gap_y 7
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer none
+
+# Allow each port monitor to track at most this many connections (if 0 or not set, default is 256)
+#max_port_monitor_connections 256
+
+# Maximum number of special things, e.g. fonts, offsets, aligns, etc.
+#max_specials 512
+
+# Maximum size of buffer for user text, i.e. below TEXT line.
+#max_user_text 16384
+
+#if_up_strictness The value is one of up, link or address, to check for the interface being  solely
+#              up, being up and having link or being up, having link and an assigned IP address.
+if_up_strictness address
+
+# variable is given either in format $variable or in ${variable}. Latter
+# allows characters right after the variable and must be used in network
+# stuff because of an argument
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+$alignc${color}${color}$nodename${color}  ${color #0090B4}UPTIME${color}: ${uptime_short}  ${color #0090B4}CPU1${color}: ${freq cpu1}Mhz-${cpu cpu1}%  ${color #0090B4}CPU2${color}: ${freq cpu2}Mhz-${cpu cpu2}%  ${color #0090B4}LOAD${color}: ${loadavg 1} ${loadavg 2}  ${color #0090B4}MEM${color}: ${memperc}%   ${color #0090B4}HOME${color}: ${fs_free_perc /home/}% - ${hddtemp sda}${color #0090B4}${if_up wlan0}  ${color #0090B4}WLAN0${color}: ${wireless_essid wlan0}@${addr wlan0} up:${upspeed wlan0} down:${downspeed wlan0} kb/s${endif}${if_up eth0}  ${color #0090B4}ETH0${color}: ${addr eth0} up:${upspeed eth0} down:${downspeed eth0} kb/s${endif}  ${color #0090B4}BATT${color}: ${battery_percent BAT1}%-${execi 8 cat /proc/acpi/battery/BAT1/state | grep "charging state" | cut -c26-37 | sed '/^$/d'}  ${color #0090B4}GMAIL${color}: ${execi 600 python ~/bin/conkygmail.py}  ${color 0090B4}YAOURT${color}: ${execi 7200 ~/bin/conkyyaourt.pl}  ${color 0090B4}TIME${color}: ${time %I:%M %P}  

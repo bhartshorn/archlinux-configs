@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="SharnBox">
+		<item label="Term">
+			<action name="Execute">
+				<execute>
+					urxvt
+				</execute>
+			</action>
+		</item>
+		<item label="Firefox">
+			<action name="Execute">
+				<execute>
+					firefox
+				</execute>
+			</action>
+		</item>
+		<item label="Thunar">
+			<action name="Execute">
+				<execute>
+					thunar
+				</execute>
+			</action>
+		</item>
+		<item label="Pidgin">
+			<action name="Execute">
+				<execute>
+					pidgin
+				</execute>
+			</action>
+		</item>
+		<item label="Exaile">
+			<action name="Execute">
+				<execute>
+					exaile
+				</execute>
+			</action>
+		</item>
+		<item label="Leafpad">
+			<action name="Execute">
+				<execute>
+					leafpad
+				</execute>
+			</action>
+		</item>
+		<item label="Screeny Hi">
+			<action name="Execute">
+				<execute>
+					scrot -q 100 -d 1 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
+				</execute>
+			</action>
+		</item>
+		<item label="Screeny Lo">
+			<action name="Execute">
+				<execute>
+					scrot -q 100 -d 1 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
+				</execute>
+			</action>
+		</item>
+		<item label="Run">
+			<action name="Execute">
+				<execute>
+					gmrun
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="2" label="Editors">
+			<item label="Nano">
+				<action name="Execute">
+					<execute>
+						urxvt -e nano
+					</execute>
+				</action>
+			</item>
+			<item label="Vi">
+				<action name="Execute">
+					<execute>
+						urxvt -e vi
+					</execute>
+				</action>
+			</item>
+			<item label="Vim">
+				<action name="Execute">
+					<execute>
+						urxvt -e vim
+					</execute>
+				</action>
+			</item>
+			<item label="Leafpad">
+				<action name="Execute">
+					<execute>
+						leafpad
+					</execute>
+				</action>
+			</item>
+			<item label="Bluefish">
+				<action name="Execute">
+					<execute>
+						bluefish
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="18" label="Games">
+			<menu id="17" label="Amusement">
+				<item label="Xeyes">
+					<action name="Execute">
+						<execute>
+							xeyes
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="10" label="Arcade">
+				<item label="fretsonfire">
+					<action name="Execute">
+						<execute>
+							fretsonfire
+						</execute>
+					</action>
+				</item>
+				<item label="PacMan">
+					<action name="Execute">
+						<execute>
+							pacman
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Tremulous">
+				<action name="Execute">
+					<execute>
+						tremulous
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="6" label="Graphics">
+			<item label="GQview">
+				<action name="Execute">
+					<execute>
+						gqview
+					</execute>
+				</action>
+			</item>
+			<item label="The GIMP">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
+			<item label="Gcolor2">
+				<action name="Execute">
+					<execute>
+						gcolor2
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="7" label="Multimedia">
+			<item label="Exaile Music Player">
+				<action name="Execute">
+					<execute>
+						exaile
+					</execute>
+				</action>
+			</item>
+			<item label="OSS4 Mixer">
+				<action name="Execute">
+					<execute>
+						ossxmix
+					</execute>
+				</action>
+			</item>
+			<item label="Songbird">
+				<action name="Execute">
+					<execute>
+						songbird
+					</execute>
+				</action>
+			</item>
+			<item label="Audacious">
+				<action name="Execute">
+					<execute>
+						audacious
+					</execute>
+				</action>
+			</item>
+			<item label="Brasero Disc Burning">
+				<action name="Execute">
+					<execute>
+						brasero
+					</execute>
+				</action>
+			</item>
+			<item label="Gmplayer">
+				<action name="Execute">
+					<execute>
+						gmplayer
+					</execute>
+				</action>
+			</item>
+			<item label="gtk-recordMyDesktop">
+				<action name="Execute">
+					<execute>
+						gtk-recordMyDesktop
+					</execute>
+				</action>
+			</item>
+			<item label="Sonata">
+				<action name="Execute">
+					<execute>
+						sonata
+					</execute>
+				</action>
+			</item>
+			<item label="Sound Recorder">
+				<action name="Execute">
+					<execute>
+						gnome-sound-recorder
+					</execute>
+				</action>
+			</item>
+			<item label="VLC media player">
+				<action name="Execute">
+					<execute>
+						vlc
+					</execute>
+				</action>
+			</item>
+			<item label="xine">
+				<action name="Execute">
+					<execute>
+						xine
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="5" label="Network">
+			<item label="Emesene">
+				<action name="Execute">
+					<execute>
+						emesene
+					</execute>
+				</action>
+			</item>
+			<item label="FireFox">
+				<action name="Execute">
+					<execute>
+						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="ELinks">
+				<action name="Execute">
+					<execute>
+						urxvt -e elinks
+					</execute>
+				</action>
+			</item>
+			<item label="FileZilla FTP client">
+				<action name="Execute">
+					<execute>
+						filezilla
+					</execute>
+				</action>
+			</item>
+			<item label="Google Earth">
+				<action name="Execute">
+					<execute>
+						googleearth
+					</execute>
+				</action>
+			</item>
+			<item label="IPblock">
+				<action name="Execute">
+					<execute>
+						gksu -u root /usr/sbin/ipblock -g
+					</execute>
+				</action>
+			</item>
+			<item label="Irssi">
+				<action name="Execute">
+					<execute>
+						urxvt -e irssi
+					</execute>
+				</action>
+			</item>
+			<item label="Opera">
+				<action name="Execute">
+					<execute>
+						opera
+					</execute>
+				</action>
+			</item>
+			<item label="Pidgin Internet Messenger">
+				<action name="Execute">
+					<execute>
+						pidgin
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="3" label="Office">
+			<item label="Adobe Reader 8">
+				<action name="Execute">
+					<execute>
+						acroread
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Base">
+				<action name="Execute">
+					<execute>
+						soffice -base
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Calc">
+				<action name="Execute">
+					<execute>
+						soffice -calc
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Draw">
+				<action name="Execute">
+					<execute>
+						soffice -draw
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 From Template">
+				<action name="Execute">
+					<execute>
+						soffice slot:5500
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Impress">
+				<action name="Execute">
+					<execute>
+						soffice -impress
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Math">
+				<action name="Execute">
+					<execute>
+						soffice -math
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Printer Administration">
+				<action name="Execute">
+					<execute>
+						spadmin
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.0 Writer">
+				<action name="Execute">
+					<execute>
+						soffice -writer
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="19" label="Shells">
+			<item label="GIT">
+				<action name="Execute">
+					<execute>
+						urxvt -e git
+					</execute>
+				</action>
+			</item>
+			<item label="Root Terminal">
+				<action name="Execute">
+					<execute>
+						gksu gnome-terminal
+					</execute>
+				</action>
+			</item>
+			<item label="rxvt-unicode">
+				<action name="Execute">
+					<execute>
+						urxvt
+					</execute>
+				</action>
+			</item>
+			<item label="Xterm">
+				<action name="Execute">
+					<execute>
+						urxvt
+					</execute>
+				</action>
+			</item>
+			<item label="XTerm (Unicode)">
+				<action name="Execute">
+					<execute>
+						urxvt
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="37" label="System">
+			<menu id="36" label="Settings">
+				<menu id="21" label="GNOME">
+					<item label="Privilege granting">
+						<action name="Execute">
+							<execute>
+								gksu-properties
+							</execute>
+						</action>
+					</item>
+					<item label="Touchpad">
+						<action name="Execute">
+							<execute>
+								gsynaptics
+							</execute>
+						</action>
+					</item>
+				</menu>
+				<menu id="35" label="Xfce">
+					<item label="Xfce 4 Preferred Applications">
+						<action name="Execute">
+							<execute>
+								exo-preferred-applications
+							</execute>
+						</action>
+					</item>
+				</menu>
+			</menu>
+			<item label="Avahi Zeroconf Browser">
+				<action name="Execute">
+					<execute>
+						avahi-discover
+					</execute>
+				</action>
+			</item>
+			<item label="Bulk Rename">
+				<action name="Execute">
+					<execute>
+						/usr/lib/xfce4/ThunarBulkRename
+					</execute>
+				</action>
+			</item>
+			<item label="Htop">
+				<action name="Execute">
+					<execute>
+						urxvt -e htop
+					</execute>
+				</action>
+			</item>
+			<item label="Top">
+				<action name="Execute">
+					<execute>
+						urxvt -e top
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<item label="Activate ScreenSaver (Next)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -next
+					</execute>
+				</action>
+			</item>
+			<item label="Activate ScreenSaver (Previous)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -prev
+					</execute>
+				</action>
+			</item>
+			<item label="Activate ScreenSaver (Random)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -activate
+					</execute>
+				</action>
+			</item>
+			<item label="Demo Screen Hacks">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -demo
+					</execute>
+				</action>
+			</item>
+			<item label="Disable XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -exit
+					</execute>
+				</action>
+			</item>
+			<item label="Editres">
+				<action name="Execute">
+					<execute>
+						editres
+					</execute>
+				</action>
+			</item>
+			<item label="Enable XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver
+					</execute>
+				</action>
+			</item>
+			<item label="HP Device Manager">
+				<action name="Execute">
+					<execute>
+						hp-toolbox
+					</execute>
+				</action>
+			</item>
+			<item label="Info">
+				<action name="Execute">
+					<execute>
+						urxvt -e info
+					</execute>
+				</action>
+			</item>
+			<item label="keyTouch">
+				<action name="Execute">
+					<execute>
+						keytouch
+					</execute>
+				</action>
+			</item>
+			<item label="Oclock">
+				<action name="Execute">
+					<execute>
+						oclock
+					</execute>
+				</action>
+			</item>
+			<item label="Reinitialize XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -restart
+					</execute>
+				</action>
+			</item>
+			<item label="ScreenSaver Preferences">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -prefs
+					</execute>
+				</action>
+			</item>
+			<item label="Viewres">
+				<action name="Execute">
+					<execute>
+						viewres
+					</execute>
+				</action>
+			</item>
+			<item label="Xclipboard">
+				<action name="Execute">
+					<execute>
+						xclipboard
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (analog)">
+				<action name="Execute">
+					<execute>
+						xclock -analog
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (digital)">
+				<action name="Execute">
+					<execute>
+						xclock -digital
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (digital)">
+				<action name="Execute">
+					<execute>
+						xclock -digital -update 1
+					</execute>
+				</action>
+			</item>
+			<item label="Xcutsel">
+				<action name="Execute">
+					<execute>
+						xcutsel
+					</execute>
+				</action>
+			</item>
+			<item label="Xev">
+				<action name="Execute">
+					<execute>
+						urxvt -e xev
+					</execute>
+				</action>
+			</item>
+			<item label="XFontSel">
+				<action name="Execute">
+					<execute>
+						xfontsel
+					</execute>
+				</action>
+			</item>
+			<item label="Xkill">
+				<action name="Execute">
+					<execute>
+						xkill
+					</execute>
+				</action>
+			</item>
+			<item label="Xlogo">
+				<action name="Execute">
+					<execute>
+						xlogo
+					</execute>
+				</action>
+			</item>
+			<item label="Xmag">
+				<action name="Execute">
+					<execute>
+						xmag
+					</execute>
+				</action>
+			</item>
+			<item label="Xman">
+				<action name="Execute">
+					<execute>
+						xman
+					</execute>
+				</action>
+			</item>
+			<item label="Xrefresh">
+				<action name="Execute">
+					<execute>
+						xrefresh
+					</execute>
+				</action>
+			</item>
+			<item label="Xsetroot">
+				<action name="Execute">
+					<execute>
+						xsetroot
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="40" label="OpenBox">
+			<item label="Openbox Configuration Manager">
+				<action name="Execute">
+					<execute>
+						obconf
+					</execute>
+				</action>
+			</item>
+			<menu execute="python /home/brandon/.config/openbox/wallmenu.py" id="pipe-38459" label="Wallmenu"/>
+			<menu id="client-list-menu"/>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<item label="Exit">
+				<action name="Exit"/>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
