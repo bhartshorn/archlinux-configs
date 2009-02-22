@@ -1,0 +1,84 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 0.1.3
+#
+# If you edit this, do not forget to uncomment any lines that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h 
+# The XK_ is not needed. 
+#
+# List of modifier (on my keyboard): 
+#   Control, Shift, Mod1 (Alt), Mod2 (NumLock), 
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll). 
+#
+# Another way to specifie a key is to use 'xev' and set the 
+# keycode with c:nnn or the modifier with m:nnn where nnn is 
+# the keycode or the state returned by xev 
+#
+# This file is created by xbindkey_config 
+# The structure is : 
+# # Remark 
+# "command" 
+# m:xxx + c:xxx 
+# Shift+... 
+
+
+
+
+#keystate_numlock = enable
+#keystate_scrolllock = enable
+#keystate_capslock = enable
+
+
+
+#Stop
+"remoot stop"
+    m:0x0 + c:174
+    XF86AudioStop 
+
+#Back
+"remoot prev"
+    m:0x0 + c:173
+    XF86AudioPrev 
+
+#Play/Pause
+"remoot playpause"
+    m:0x0 + c:172
+    XF86AudioPlay 
+
+#Next
+"remoot next"
+    m:0x0 + c:171
+    XF86AudioNext 
+
+#Mute
+"Command"
+    m:0x0 + c:121
+    XF86AudioMute 
+
+#VolDown
+"ossmix vmix0-outvol -- -1"
+    m:0x0 + c:122
+    XF86AudioLowerVolume 
+
+#VolUp
+"ossmix vmix0-outvol -- +1"
+    m:0x0 + c:123
+    XF86AudioRaiseVolume 
+
+#ScreenDown
+""
+    m:0x0 + c:101
+    XF86KbdBrightnessDown 
+
+#ScreenUp
+""
+    m:0x0 + c:233
+    XF86MonBrightnessUp 
+
+#
+# End of xbindkeys configuration
