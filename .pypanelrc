@@ -14,14 +14,14 @@ P_T_BUFF = 0
 #------------------------------------------------------------------------------
 # Colors: Format is hex triplet - 0xrrggbb
 #------------------------------------------------------------------------------
-BG_COLOR        = "0x202020"    # Panel background and tinting color
-TASK_COLOR      = "0x686868"    # Normal task name color 
+BG_COLOR        = "0x333333"    # Panel background and tinting color
+TASK_COLOR      = "0xC0C0C0"    # Normal task name color 
 FOCUSED_COLOR   = "0x0090B4"    # Focused task name color
-SHADED_COLOR    = "0x686868"    # Shaded task name color 
-MINIMIZED_COLOR = "0x686868"    # Minimized task name color 
-DESKTOP_COLOR   = "0x686868"    # Desktop name color
-CLOCK_COLOR     = "0x686868"    # Clock text color
-LINE_COLOR      = "0x202020"    # Vertical line color
+SHADED_COLOR    = "0xC0C0C0" # Shaded task name color 
+MINIMIZED_COLOR = "0xC0C0C0"    # Minimized task name color 
+DESKTOP_COLOR   = "0xC0C0C0"    # Desktop name color
+CLOCK_COLOR     = "0xC0C0C0"    # Clock text color
+LINE_COLOR      = "0x333333"    # Vertical line color
 
 # Text Shadow Colors
 TASK_SHADOW_COLOR      = "0xffffff"
@@ -126,7 +126,7 @@ LAUNCH_LIST     = [
 # Background Alpha/Shade Level: 0 (Fully Translucent) -> 255 (Fully Opaque)
 # BG_COLOR is used for tinting
 #------------------------------------------------------------------------------
-SHADE           = 200
+SHADE           = 255
 
 #------------------------------------------------------------------------------
 # Misc. Options: 1 = Enabled/Yes, 0 = Disabled/No

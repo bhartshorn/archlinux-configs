@@ -7,7 +7,7 @@
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
-    <focusNew>yes</focusNew>
+    <focusNew>no</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
     <followMouse>no</followMouse>
@@ -69,30 +69,30 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
-      <size>9</size>
+      <name>Liberation Sans</name>
+      <size>7</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
-      <size>9</size>
+      <name>Liberation Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="OnScreenDisplay">
-      <name>sans</name>
-      <size>9</size>
+      <name>Liberation Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
