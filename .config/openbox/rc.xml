@@ -261,6 +261,16 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
+    <keybind key="W-r">
+      <action name="execute">
+        <execute>gmrun</execute>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="execute">
+        <execute>gmrun</execute>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>

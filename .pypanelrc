@@ -60,7 +60,7 @@ CLOCK_FORMAT    = "%a-%b-%d %l:%M"    # Ex: 2004-09-25 17:45
 #------------------------------------------------------------------------------
 # Clock Delay: Seconds between each clock update during periods of inactivity
 #------------------------------------------------------------------------------
-CLOCK_DELAY     = 20
+CLOCK_DELAY     = 10
 
 #------------------------------------------------------------------------------
 # Hidden Application List: Apps listed here will not be display on the panel
@@ -72,7 +72,7 @@ HIDE_LIST       = []
 #------------------------------------------------------------------------------
 # Hidden Panel Size: Size of the panel when it's hidden/minimized
 #------------------------------------------------------------------------------
-HIDDEN_SIZE     = 2
+HIDDEN_SIZE     = 1
 
 #------------------------------------------------------------------------------
 # Panel Text Font: This option takes either a traditional or Xft font string 
@@ -131,11 +131,11 @@ SHADE           = 255
 #------------------------------------------------------------------------------
 # Misc. Options: 1 = Enabled/Yes, 0 = Disabled/No
 #------------------------------------------------------------------------------
-ABOVE           = 1             # Panel is always above other apps
+ABOVE           = 0             # Panel is always above other apps
 APPICONS        = 0             # Show application icons
 AUTOHIDE        = 0             # Autohide uses the CLOCK_DELAY timer above
 SHADOWS         = 0             # Show text shadows
-SHOWLINES       = 0             # Show object seperation lines
+SHOWLINES       = 1             # Show object seperation lines
 SHOWBORDER      = 0             # Show a border around the panel
 
 #------------------------------------------------------------------------------

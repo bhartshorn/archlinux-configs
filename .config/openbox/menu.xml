@@ -46,14 +46,14 @@
 		<item label="Screeny Hi">
 			<action name="Execute">
 				<execute>
-					scrot -q 100 -d 1 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
+					scrot -q 100 -d 5 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
 				</execute>
 			</action>
 		</item>
 		<item label="Screeny Lo">
 			<action name="Execute">
 				<execute>
-					scrot -q 100 -d 1 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
+					scrot -q 100 -d 5 ~/pictures/screenshots/Screenshot-%F-%H%M%S.png
 				</execute>
 			</action>
 		</item>

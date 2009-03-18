@@ -70,9 +70,8 @@ altscreen on
 zombie kr # keep zombie windows (k=kill, r=reload)
 
 bind c screen 1
-bind 0 select 10                                                            
-screen 1
-select 1
+bind ^c screen 1
+bind 0 select 10
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -106,4 +105,4 @@ screen -t term2 	1
 screen -t music		6 ncmpcpp
 screen -t irc		7 weechat-dev
 screen -t bitorrent	8 rtorrent
-
+screen -t network	9 wicd-curses

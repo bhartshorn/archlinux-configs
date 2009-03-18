@@ -56,17 +56,17 @@
     XF86AudioNext 
 
 #Mute
-"Command"
+"ossvol -t"
     m:0x0 + c:121
     XF86AudioMute 
 
 #VolDown
-"ossmix vmix0-outvol -- -1"
+"ossvol -d 1"
     m:0x0 + c:122
     XF86AudioLowerVolume 
 
 #VolUp
-"ossmix vmix0-outvol -- +1"
+"ossvol -i 1"
     m:0x0 + c:123
     XF86AudioRaiseVolume 
 
