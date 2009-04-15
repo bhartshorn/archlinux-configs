@@ -49,7 +49,7 @@ update_interval 4
 total_run_times 0
 
 # Create own window instead of using desktop (required in nautilus)
-own_window 1
+own_window yes
 
 # If own_window is yes, you may use type normal, desktop or override
 own_window_type override

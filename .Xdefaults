@@ -45,7 +45,7 @@ urxvt*foreground:Grey
 !	(From http://phraktured.net/terminal-colors/)
 !
 
-!Theme Seven
+Theme Seven
 *background: rgb:67/67/67
 *foreground: rgb:ff/ff/ff
 *color0:     rgb:00/00/00
@@ -65,6 +65,25 @@ urxvt*foreground:Grey
 *color14:    rgb:ba/cd/f8
 *color15:    rgb:d5/d5/d5
 
+!Theme SquareHimself made for me - not toopretty, unfortunately.
+!*background: #000000
+!*forground: #acacab
+!*color0: #C0C0C0
+!*color1: #B40000
+!*color2: #2AB400
+!*color3: #FEFFBF
+!*color4: #0090B4
+!*color5: #8700B4
+!*color6: #00B1B4
+!*color7: #ffffff
+!*color8: #333333
+!*color9: #7E0000
+!*color10: #1D7E00
+!*color11: #FEFF80
+!*color12: #00657E
+!*color13: #5F007E
+!*color14: #007C7E
+!*color15: #D3D3D3
 
 #Theme Three
 !*background: rgb:00/00/00

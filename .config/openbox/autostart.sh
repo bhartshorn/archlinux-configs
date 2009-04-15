@@ -23,6 +23,6 @@ if which start_kdeinit >/dev/null; then
   LD_BIND_NOW=true start_kdeinit --new-startup +kcminit_startup &
 fi
 
-(sleep 1 && pypanel) &
-
+(sleep 3 && pypanel) &
+(sleep 7 && sonata --hidden) &
 
