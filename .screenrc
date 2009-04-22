@@ -96,7 +96,7 @@ bind 0 select 10
 startup_message off
 
 # Set messages timeout to one second:
-msgwait 15
+msgwait 10
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 

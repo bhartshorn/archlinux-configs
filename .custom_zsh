@@ -1,0 +1,116 @@
+#Options
+setopt EXTENDED_HISTORY		# puts timestamps in the history
+setopt MENUCOMPLETE
+setopt NUMERIC_GLOB_SORT
+
+# Set/unset  shell options
+setopt   notify globdots correct pushdtohome autolist
+setopt   correctall autocd recexact longlistjobs extendedglob
+unsetopt bgnice
+
+# Autoload zsh modules when they are referenced
+zmodload -a zsh/stat stat
+zmodload -a zsh/zpty zpty
+zmodload -a zsh/zprof zprof
+zmodload -ap zsh/mapfile mapfile
+
+# format titles for screen and rxvt
+function title() {
+  # escape '%' chars in $1, make nonprintables visible
+  a=${(V)1//\%/\%\%}
+
+  # Truncate command, and join lines.
+  a=$(print -Pn "%40>...>$a" | tr -d "\n")
+
+  case $TERM in
+  screen)
+    print -Pn "\ek$a:$3\e\\"      # screen title (in ^A")
+    ;;
+  xterm*|rxvt)
+    print -Pn "\e]2;$2 | $a:$3\a" # plain xterm title
+    ;;
+  esac
+}
+
+# precmd is called just before the prompt is printed
+function precmd() {
+  title "zsh" "$USER@%m" "%55<...<%~"
+}
+
+# preexec is called just before any command line is executed
+function preexec() {
+  title "$1" "$USER@%m" "%35<...<%~"
+}
+
+# aliases
+#if ls -F --color=auto >&/dev/null; then
+  alias ls="ls --color=auto -F"
+#else
+#  alias ls="ls -F"
+#fi
+if grep --color=auto >&/dev/null; then
+  alias grep="grep --color=auto"
+fi
+alias pacman="sudo pacman"
+alias yaourt="sudo yaourt"
+alias cd..='cd ..'
+alias ..='cd ..'
+alias syncd2='diff -q downloads/torrents/ /media/D2/MUSIC/ | sort | most'
+alias ping='ping -c 5'
+#incase I need to type yaourt..
+alias yoaurt='yaourt'
+alias yuaort='yaourt'
+alias youart='yaourt'
+alias yauort='yaourt'
+alias yuoart='yaourt'
+
+# functions
+mdc() { mkdir -p "$1" && cd "$1" }
+sdate() { date +%Y.%m.%d }
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
+zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+
+# Completion Styles
+
+# list of completers to use
+zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+
+# insert all expansions for expand completer
+zstyle ':completion:*:expand:*' tag-order all-expansions
+
+# formatting and messages
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
+zstyle ':completion:*' group-name ''
+
+# match uppercase from lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# offer indexes before parameters in subscripts
+zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
+
+## add colors to processes for kill completion
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+zstyle ':completion:*:*:kill:*:processes' command 'ps --forest -A -o pid,user,cmd'
+zstyle ':completion:*:processes-names' command 'ps axho command'
+
+# Filename suffixes to ignore during completion (except after rm command)
+#zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
+#    '*?.old' '*?.pro'
+
+# ignore completion functions (until the _ignored completer)
+zstyle ':completion:*:functions' ignored-patterns '_*'
+zstyle ':completion:*:*:*:users' ignored-patterns \
+        adm apache bin daemon games gdm halt ident junkbust lp mail mailnull \
+        named news nfsnobody nobody nscd ntp operator pcap postgres radvd \
+        rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs avahi-autoipd\
+        avahi backup messagebus beagleindex debian-tor dhcp dnsmasq fetchmail\
+        firebird gnats haldaemon hplip irc klog list man cupsys postfix\
+        proxy syslog www-data mldonkey sys snort
