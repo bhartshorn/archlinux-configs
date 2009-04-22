@@ -61,9 +61,24 @@ autodetach            on
 
 vbell off
 
-defscrollback 10000 # Use a 30000-line scrollback buffer
+defscrollback 10000 # Use a 10000-line scrollback buffer
 
-terminfo rxvt* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#terminfo rxvt* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# From _why http://dotfiles.org/~_why/.screenrc
+termcapinfo xterm*|Eterm|mlterm|rxvt* 'hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007'
+defhstatus "$USER@ H | #  |  t"
+
+activity "%c activity -> %n%f %t"
+bell "%c bell -> %n%f %t^G"
+vbell_msg " *beep* "
+
+bind ~ activity       "%c activity -> %n%f %t"
+bind * activity       "%c activity -> %n%f %t"
+
+silencewait           15
+
+# End _why
 
 altscreen on
 
@@ -81,7 +96,7 @@ bind 0 select 10
 startup_message off
 
 # Set messages timeout to one second:
-msgwait 1
+msgwait 15
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -100,9 +115,8 @@ bindkey -k k4 screen
 
 ##	Autostart 		##
 
-screen -t term1 	0
-screen -t term2 	1
-screen -t music		6 ncmpcpp
+screen -t zsh   	1
+screen -t zsh   	2
 screen -t irc		7 weechat-dev
 screen -t bitorrent	8 rtorrent
 screen -t network	9 wicd-curses

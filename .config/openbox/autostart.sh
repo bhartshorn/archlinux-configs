@@ -24,5 +24,5 @@ if which start_kdeinit >/dev/null; then
 fi
 
 (sleep 3 && pypanel) &
-(sleep 7 && sonata --hidden) &
+(sleep 7 && quodlibet) &
 

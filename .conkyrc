@@ -21,7 +21,7 @@ background yes
 use_xft yes
 
 # Xft font when Xft is enabled
-#xftfont ProggyTinyTTSZ 
+#xftfont ProggyTinyTTSZ
 xftfont liberation sans:size=7
 
 # Text alpha when using Xft
@@ -42,7 +42,7 @@ xftfont liberation sans:size=7
 mail_spool $MAIL
 
 # Update interval in seconds
-update_interval 4 
+update_interval 4
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
@@ -91,11 +91,14 @@ border_margin 5
 border_width 0
 
 # Default colors and also border colors
-default_color C0C0C0 
-default_shade_color C0C0C0 
-default_outline_color white
+#default_color C0C0C0
+#default_shade_color C0C0C0
+#default_outline_color white
 #default_shade_color white
-#default_outline_color 
+#default_outline_color
+
+color0 C0C0C0
+color1 0090B4
 
 #dexter_client no
 #dexter_server no
@@ -154,4 +157,4 @@ if_up_strictness address
 # stuff after 'TEXT' will be formatted on screen
 
 TEXT
-$alignc${color}${color}$nodename${color}  ${color #0090B4}UPTIME${color}: ${uptime_short}  ${color #0090B4}CPU1${color}: ${freq cpu1}Mhz-${cpu cpu1}%  ${color #0090B4}CPU2${color}: ${freq cpu2}Mhz-${cpu cpu2}%  ${color #0090B4}LOAD${color}: ${loadavg 1} ${loadavg 2}  ${color #0090B4}MEM${color}: ${memperc}%   ${color #0090B4}HOME${color}: ${fs_free_perc /home/}% - ${hddtemp sda}${color #0090B4}${if_up wlan0}  ${color #0090B4}WLAN0${color}: ${wireless_essid wlan0}@${addr wlan0} up:${upspeed wlan0} down:${downspeed wlan0} kb/s${endif}${if_up eth0}  ${color #0090B4}ETH0${color}: ${addr eth0} up:${upspeed eth0} down:${downspeed eth0} kb/s${endif}  ${color #0090B4}BATT${color}: ${battery_percent BAT1}%-${execi 8 cat /proc/acpi/battery/BAT1/state | grep "charging state" | cut -c26-37 | sed '/^$/d'}  ${color #0090B4}GMAIL${color}: ${execi 600 python ~/bin/conkygmail.py}  ${color 0090B4}YAOURT${color}: ${execi 7200 ~/bin/conkyyaourt.pl}  ${color 0090B4}TIME${color}: ${time %I:%M %P}  
+$alignc${color1}UPTIME${color0}: ${uptime_short}  ${color1}CPU1${color0}: ${freq cpu1}Mhz-${cpu cpu1}%  ${color1}CPU2${color0}: ${freq cpu2}Mhz-${cpu cpu2}%  ${color1}LOAD${color0}: ${loadavg 1} ${loadavg 2}  ${color1}MEM${color0}: ${memperc}%   ${color1}HOME${color0}: ${fs_free_perc /home/}% - ${hddtemp sda}${color1}${if_up wlan0}  ${color1}WLAN0${color0}: ${wireless_essid wlan0}@${addr wlan0} up:${upspeed wlan0} down:${downspeed wlan0} kb/s${endif}${if_up eth0}  ${color1}ETH0${color0}: ${addr eth0} up:${upspeed eth0} down:${downspeed eth0} kb/s${endif}  ${color1}BATT${color0}: ${battery_percent BAT1}%-${execi 8 cat /proc/acpi/battery/BAT1/state | grep "charging state" | cut -c26-37 | sed '/^$/d'}  ${color1}GMAIL${color0}: ${execi 600 python ~/bin/conkygmail.py}  ${color1}YAOURT${color0}: ${execi 600 ~/bin/conkyyaourt.pl}  ${color1}TIME${color0}: ${time %I:%M %P}

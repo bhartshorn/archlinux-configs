@@ -38,6 +38,7 @@ urxvt*tintColor: #000000
 urxvt.intensityStyles:    true
 urxvt*background:Black
 urxvt*foreground:Grey
+urxvt*termName: rxvt
 
 !########################
 !	Urxvt Colors
